@@ -98,8 +98,6 @@
 }
 
 
-/* project image zoom effect */
-
 .zoom-effect {
   overflow: hidden;
   transition: transform 0.3s ease-out;
@@ -109,9 +107,7 @@
   transform: scale(1.1);
 }
 
-
 </style>
-
 
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -140,53 +136,48 @@
 	       <div class="slider-item ">
 	      	<div class="overlay"></div>
 	         <div class="container">
-	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-				<div class="one-third js-fullheight order-md-last img d-flex justify-content-center align-items-center flex-column">
-					<img src="images/dp_2.jpg" alt="Profile Picture" style="width: 300px; height: auto; border-radius: 8px;">
-					<div class="overlay"></div>
-				  </div>
-				  
-				  
-		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-		          	<div class="text">
-		          		<span class="subheading">Hello!</span>
-			            <h1 class="mb-4 mt-3">I'm <span>Ranjeet Gupta</span></h1>
+	          <div class="row d-md-flex no-gutters slider-text align-items-center justify-content-end" data-scrollax-parent="true">
 
-						<!-- Element to contain animated typing -->
-						<span id="typing-animation"></span>
+  <div class="one-third js-fullheight order-md-last img d-flex justify-content-center align-items-center">
+    <img src="images/dp_2.jpg"
+         alt="Profile Picture"
+         style="width: 300px; height: auto; border-radius: 12px; background:#fff; padding:12px;">
+  </div>
 
-						<script>
+  <div class="one-forth d-flex align-items-center ftco-animate"
+       data-scrollax=" properties: { translateY: '70%' }">
 
-						// Initialize the typing animation
-						const typingAnimationElement = document.getElementById('typing-animation');
+    <div class="text">
+      <span class="subheading">Hello!</span>
 
-						// Create an array of typing text
-						const typingTexts = [
-						'Engineer  ',
-						'Student  ',
-						'Data Analyst  ',
-						];
+      <h1 class="mb-2 mt-3">
+        I'm <span style="color:#ffbd39;">Ranjeet</span><br>
+        <span style="color:#ffbd39;">Gupta</span>
+      </h1>
 
-						// Create a function to display the typing animation for a given text
-						function playTypingAnimation(text) {
-						// Loop through each character and add it to the element
-						for (let i = 0; i < text.length; i++) {
-							setTimeout(() => {
-							typingAnimationElement.textContent += text[i];
-							}, i * 200); // Increase the delay to slow down the typing animation
-						}
+      <span id="typing-animation"></span>
 
-						// Once the animation is complete, reset the text and start over
-						setTimeout(() => {
-							typingAnimationElement.textContent = '';
-							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
-						}, text.length * 200);
-						}
+      <script>
+        const typingAnimationElement = document.getElementById('typing-animation');
+        const typingTexts = ['Engineer  ', 'Student  ', 'Data Analyst  '];
 
-						// Start the typing animation loop
-						playTypingAnimation(typingTexts[0]);
+        function playTypingAnimation(text) {
+          for (let i = 0; i < text.length; i++) {
+            setTimeout(() => {
+              typingAnimationElement.textContent += text[i];
+            }, i * 200);
+          }
 
-						</script>
+          setTimeout(() => {
+            typingAnimationElement.textContent = '';
+            playTypingAnimation(
+              typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]
+            );
+          }, text.length * 200);
+        }
+
+        playTypingAnimation(typingTexts[0]);
+      </script>
 
 						<br>
 						<br>
@@ -202,7 +193,6 @@
 	      </div>
 		</div>
     </section>
-
 
 
     <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
